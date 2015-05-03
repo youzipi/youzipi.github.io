@@ -74,17 +74,16 @@
     <link href="http://youzipi.me/2014/03/08/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01/"/>
     <id>http://youzipi.me/2014/03/08/java学习笔记1/</id>
     <published>2014-03-08T13:24:23.000Z</published>
-    <updated>2014-04-08T02:39:10.000Z</updated>
+    <updated>2015-05-03T10:58:21.000Z</updated>
     <content type="html"><![CDATA[<p>错误处理：</p>
-<h3 id="1-_Exception_in_thread_“main”_java-lang-NullPointerException">1.     Exception in thread “main” java.lang.NullPointerException</h3><p> <a href="http://stackoverflow.com/questions/5958012/exception-in-thread-main-java-lang-nullpointerexception" target="_blank" rel="external">stackoverflow上的解答</a></p>
+<h3 id="1-_Exception_in_thread_“main”_java-lang-NullPointerException">1.     Exception in thread “main” java.lang.NullPointerException</h3><p><a href="http://stackoverflow.com/questions/5958012/exception-in-thread-main-java-lang-nullpointerexception" target="_blank" rel="external">stackoverflow上的解答</a></p>
 <p><code>It means that you are trying to access / call a method on an object which is null.</code></p>
 <p>错误原因：</p>
 <p>初始化了学生数组，但没有初始化数组中的每一个元素</p>
 <p>解决方法：</p>
 <p>重新new一个Student对象，对其录入数据，再将其付给当前的stu[i],<br>或者直接<code>stu[i] = new Student();</code><br>对应代码块如下：<br><figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Student[] stu = <span class="keyword">new</span> Student[<span class="keyword">count</span>];	<span class="comment">//建立了引用，但并没有实例化</span></span><br><span class="line"><span class="keyword">int</span> i;</span><br><span class="line"><span class="keyword">for</span>(i=<span class="number">0</span>;i &lt; <span class="keyword">count</span>;i++)&#123;</span><br><span class="line">	System.out.<span class="keyword">println</span>(<span class="string">"input id:"</span>);</span><br><span class="line">	stu[i].id = in.<span class="keyword">next</span>();		<span class="comment">//调用stu[i],报错</span></span><br><span class="line">	pass</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<pre><code>[<span class="link_label">stackoverflow上的提问</span>](<span class="link_url">http://stackoverflow.com/questions/22278892/whats-the-differences-between-initializing-an-array-of-objects-and-initializing</span>)
- 关于对象数组初始化的问题，
-</code></pre><figure class="highlight axapta"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Student[] stu = <span class="keyword">new</span> Student[<span class="keyword">count</span>];</span><br></pre></td></tr></table></figure>
+<p><a href="http://stackoverflow.com/questions/22278892/whats-the-differences-between-initializing-an-array-of-objects-and-initializing" target="_blank" rel="external">stackoverflow上的提问</a><br>     关于对象数组初始化的问题，</p>
+<figure class="highlight axapta"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Student[] stu = <span class="keyword">new</span> Student[<span class="keyword">count</span>];</span><br></pre></td></tr></table></figure>
 <p>包含了两部分：</p>
 <hr>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Student[] stu;</span><br></pre></td></tr></table></figure>
