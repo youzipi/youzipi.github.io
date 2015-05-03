@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title><![CDATA[Youzipi]]></title>
+  <subtitle><![CDATA[没有一天应该被牺牲]]></subtitle>
+  <link href="/atom.xml" rel="self"/>
+  <link href="http://youzipi.me/"/>
+  <updated>2015-02-05T04:43:03.000Z</updated>
+  <id>http://youzipi.me/</id>
+  
+  <author>
+    <name><![CDATA[youzipi]]></name>
+    <email><![CDATA[blake_12@qq.com]]></email>
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[软件杯小结]]></title>
+    <link href="http://youzipi.me/2014/05/30/draft/"/>
+    <id>http://youzipi.me/2014/05/30/draft/</id>
+    <published>2014-05-30T02:49:50.000Z</published>
+    <updated>2015-02-05T04:43:03.000Z</updated>
+    <content type="html"><![CDATA[<p>2014/5/30 10:53:05 </p>
+<p>5月21日    晴    小满    图书馆二楼东走廊<br>从最开始做桌面端到今天已经天了，到昨晚来说，看见拖拽网页写入数据库成功实现，确实有几分成就感，这就是桌面软件啊，虽然逻辑代码不多，代码耦合度高（因为是边学边做，完全没有设计框架，刚开始做根本想不到它是今天这个样子，后面计划进一步模块化）。综合来说，确实收获不少，尤其是有进度压力推着，有一个deadline在那儿。</p>
+<ol>
+<li><p>pyqt的相关资料实在太少，实力就更少了，几乎没见到完整性比较高的实例文章，几天看下来，充斥着环境搭建，下载安装，还有helloworld级别的教程，看来好多人也是浅尝辄止的地步</p>
+</li>
+<li><p>要不是有时间限制，估计我也会畏难，想要放一放，想起之前看django的教程，因为中文教程有些旧，代码规模扩大之后，排查错误很难，多次尝试无果后，就放下了，之后就越来越难再拿起来了，因为拖得时间越久，上下文切换（context。。）的成本就越高，再加上之前的问题解决没有进行记录，形成恶性循环，也不好意思在想学长询问什么了，最初兴奋的计划（学习django，参与项目开发，提升水平，积累经验）也不了了之了。前两天在一个公开课群里看到说推荐先学web.py，flask，原因是成就感很重要，我要调整下计划了。</p>
+</li>
+<li>针对昨天犯的SQL语句的错误。对新手来说，常常犯一些让人匪夷所思的错误，而在一个人的情况下，这简直就是灾难，有个前辈或同伴在就不至于这样了，现在真心觉得任勇军的项目有意义，建立新手错误集之类的东西可以同时解决新手和前辈大量的时间。<ol>
+<li>对自己来说，建立错误解决方案库也有必要，不要妄想自己以后不会遇到或再犯同样的错误。一来提高效率，二来帮助新手。</li>
+</ol>
+</li>
+<li><strong>匪夷所思</strong>都不会写了，要好好学习中文，好好看书了。（就来这个词开刀吧，考证查据，说文解字一番）</li>
+<li>项目导向的学习方式的缺陷，直接上手做项目的话，时间太紧，发生不可想象的错误（不知道怎么描述，C语言中的标点写成了中文状态下的，python中）</li>
+<li>2014/5/30 11:23:53 </li>
+</ol>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>2014/5/30 10:53:05 </p>
+<p>5月21日    晴    小满    图书馆二楼东走廊<br>从最开始做桌面端到今天已经天了，到昨晚来说，看见拖拽网页写入数据库成功实现，确实有几分成就感，这就是桌面软件啊，虽然逻辑代码不多，代码耦合度高（因为是边学边]]>
+    </summary>
+    
+      <category term="uncategorized" scheme="http://youzipi.me/categories/uncategorized/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[java源码学习]]></title>
+    <link href="http://youzipi.me/2014/04/08/java-sourcecode-study/"/>
+    <id>http://youzipi.me/2014/04/08/java-sourcecode-study/</id>
+    <published>2014-04-08T02:38:13.000Z</published>
+    <updated>2015-05-03T09:55:57.000Z</updated>
+    <content type="html"><![CDATA[<p>在51CTO上看java视频的时候，看到了<code>parseInt</code>这个函数，是<code>Integer</code>的方法，<br>看到了<code>valueOf</code>这个函数，是<code>String</code>的方法，<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> num = <span class="number">100</span>;</span><br><span class="line"><span class="comment">//String s = String(num);</span></span><br><span class="line">String s = String.valueOf(num);</span><br></pre></td></tr></table></figure></p>
+<p>在<code>String.java</code>中：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">valueOf</span><span class="params">(<span class="keyword">int</span> i)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> Integer.toString(i);</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+<p><code>Integer.java</code>:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Integer.java</span></span><br><span class="line">       <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">toString</span><span class="params">(<span class="keyword">int</span> i)</span> </span>&#123;</span><br><span class="line">               <span class="keyword">if</span> (i == Integer.MIN_VALUE)</span><br><span class="line">               <span class="keyword">return</span> <span class="string">"-2147483648"</span>;</span><br><span class="line">               <span class="keyword">int</span> size = (i &lt; <span class="number">0</span>) ? stringSize(-i) + <span class="number">1</span> : stringSize(i);</span><br><span class="line">               <span class="keyword">char</span>[] buf = <span class="keyword">new</span> <span class="keyword">char</span>[size];</span><br><span class="line">               getChars(i, size, buf);</span><br><span class="line">               <span class="keyword">return</span> <span class="keyword">new</span> String(buf, <span class="keyword">true</span>);</span><br><span class="line">               &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">       <span class="function"><span class="keyword">static</span> <span class="keyword">int</span> <span class="title">stringSize</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">               <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; ; i++)</span><br><span class="line">                   <span class="keyword">if</span> (x &lt;= sizeTable[i])</span><br><span class="line">                       <span class="keyword">return</span> i+<span class="number">1</span>;<span class="comment">//进位</span></span><br><span class="line">               &#125;</span><br><span class="line">	<span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">getChars</span><span class="params">(<span class="keyword">int</span> i, <span class="keyword">int</span> index, <span class="keyword">char</span>[] buf)</span> </span>&#123;</span><br><span class="line">               <span class="keyword">int</span> q, r;</span><br><span class="line">               <span class="keyword">int</span> charPos = index;<span class="comment">//index &lt;-size</span></span><br><span class="line">               <span class="keyword">char</span> sign = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">               <span class="keyword">if</span> (i &lt; <span class="number">0</span>) &#123;</span><br><span class="line">               sign = <span class="string">'-'</span>;</span><br><span class="line">               i = -i;</span><br><span class="line">               &#125;</span><br><span class="line">               <span class="comment">// Fall thru to fast mode for smaller numbers</span></span><br><span class="line">               <span class="comment">// assert(i &lt;= 65536, i);</span></span><br><span class="line">               <span class="keyword">for</span> (;;) &#123;</span><br><span class="line">               q = (i * <span class="number">52429</span>) &gt;&gt;&gt; (<span class="number">16</span>+<span class="number">3</span>);<span class="comment">//q = i*(52429/2^16)/2^3 = 52429/524288 ?= 0.1//2^19</span></span><br><span class="line">               r = i - ((q &lt;&lt; <span class="number">3</span>) + (q &lt;&lt; <span class="number">1</span>));  <span class="comment">// r = i-(q*10) ...</span></span><br><span class="line">               buf [--charPos] = digits [r];<span class="comment">//逆序存入数组</span></span><br><span class="line">               i = q;</span><br><span class="line">               <span class="keyword">if</span> (i == <span class="number">0</span>) <span class="keyword">break</span>;</span><br><span class="line">               &#125;</span><br><span class="line">               <span class="keyword">if</span> (sign != <span class="number">0</span>) &#123;</span><br><span class="line">               buf [--charPos] = sign;</span><br><span class="line">               &#125;</span><br><span class="line">               &#125;</span><br></pre></td></tr></table></figure>
+<p>为了提高效率，使用了<code>查表(空间换时间)</code>和<code>位运算</code></p>
+<p>用到的数组<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Integer.java</span></span><br><span class="line">       <span class="keyword">final</span> <span class="keyword">static</span> <span class="keyword">int</span> [] sizeTable = &#123; <span class="number">9</span>, <span class="number">99</span>, <span class="number">999</span>, <span class="number">9999</span>, <span class="number">99999</span>, <span class="number">999999</span>, <span class="number">9999999</span>,</span><br><span class="line">               <span class="number">99999999</span>, <span class="number">999999999</span>, Integer.MAX_VALUE &#125;;</span><br><span class="line"></span><br><span class="line">       <span class="keyword">final</span> <span class="keyword">static</span> <span class="keyword">char</span> [] DigitOnes = &#123;</span><br><span class="line">               <span class="string">'0'</span>, <span class="string">'1'</span>, <span class="string">'2'</span>, <span class="string">'3'</span>, <span class="string">'4'</span>, <span class="string">'5'</span>, <span class="string">'6'</span>, <span class="string">'7'</span>, <span class="string">'8'</span>, <span class="string">'9'</span>,</span><br><span class="line">               <span class="string">'0'</span>, <span class="string">'1'</span>, <span class="string">'2'</span>, <span class="string">'3'</span>, <span class="string">'4'</span>, <span class="string">'5'</span>, <span class="string">'6'</span>, <span class="string">'7'</span>, <span class="string">'8'</span>, <span class="string">'9'</span>,</span><br><span class="line">               <span class="string">'0'</span>, <span class="string">'1'</span>, <span class="string">'2'</span>, <span class="string">'3'</span>, <span class="string">'4'</span>, <span class="string">'5'</span>, <span class="string">'6'</span>, <span class="string">'7'</span>, <span class="string">'8'</span>, <span class="string">'9'</span>,</span><br><span class="line">               <span class="string">'0'</span>, <span class="string">'1'</span>, <span class="string">'2'</span>, <span class="string">'3'</span>, <span class="string">'4'</span>, <span class="string">'5'</span>, <span class="string">'6'</span>, <span class="string">'7'</span>, <span class="string">'8'</span>, <span class="string">'9'</span>,</span><br><span class="line">               <span class="string">'0'</span>, <span class="string">'1'</span>, <span class="string">'2'</span>, <span class="string">'3'</span>, <span class="string">'4'</span>, <span class="string">'5'</span>, <span class="string">'6'</span>, <span class="string">'7'</span>, <span class="string">'8'</span>, <span class="string">'9'</span>,</span><br><span class="line">               <span class="string">'0'</span>, <span class="string">'1'</span>, <span class="string">'2'</span>, <span class="string">'3'</span>, <span class="string">'4'</span>, <span class="string">'5'</span>, <span class="string">'6'</span>, <span class="string">'7'</span>, <span class="string">'8'</span>, <span class="string">'9'</span>,</span><br><span class="line">               <span class="string">'0'</span>, <span class="string">'1'</span>, <span class="string">'2'</span>, <span class="string">'3'</span>, <span class="string">'4'</span>, <span class="string">'5'</span>, <span class="string">'6'</span>, <span class="string">'7'</span>, <span class="string">'8'</span>, <span class="string">'9'</span>,</span><br><span class="line">               <span class="string">'0'</span>, <span class="string">'1'</span>, <span class="string">'2'</span>, <span class="string">'3'</span>, <span class="string">'4'</span>, <span class="string">'5'</span>, <span class="string">'6'</span>, <span class="string">'7'</span>, <span class="string">'8'</span>, <span class="string">'9'</span>,</span><br><span class="line">               <span class="string">'0'</span>, <span class="string">'1'</span>, <span class="string">'2'</span>, <span class="string">'3'</span>, <span class="string">'4'</span>, <span class="string">'5'</span>, <span class="string">'6'</span>, <span class="string">'7'</span>, <span class="string">'8'</span>, <span class="string">'9'</span>,</span><br><span class="line">               <span class="string">'0'</span>, <span class="string">'1'</span>, <span class="string">'2'</span>, <span class="string">'3'</span>, <span class="string">'4'</span>, <span class="string">'5'</span>, <span class="string">'6'</span>, <span class="string">'7'</span>, <span class="string">'8'</span>, <span class="string">'9'</span>,</span><br><span class="line">               &#125; ;</span><br><span class="line"></span><br><span class="line">       <span class="keyword">final</span> <span class="keyword">static</span> <span class="keyword">char</span> [] DigitTens = &#123;</span><br><span class="line">               <span class="string">'0'</span>, <span class="string">'0'</span>, <span class="string">'0'</span>, <span class="string">'0'</span>, <span class="string">'0'</span>, <span class="string">'0'</span>, <span class="string">'0'</span>, <span class="string">'0'</span>, <span class="string">'0'</span>, <span class="string">'0'</span>,</span><br><span class="line">               <span class="string">'1'</span>, <span class="string">'1'</span>, <span class="string">'1'</span>, <span class="string">'1'</span>, <span class="string">'1'</span>, <span class="string">'1'</span>, <span class="string">'1'</span>, <span class="string">'1'</span>, <span class="string">'1'</span>, <span class="string">'1'</span>,</span><br><span class="line">               <span class="string">'2'</span>, <span class="string">'2'</span>, <span class="string">'2'</span>, <span class="string">'2'</span>, <span class="string">'2'</span>, <span class="string">'2'</span>, <span class="string">'2'</span>, <span class="string">'2'</span>, <span class="string">'2'</span>, <span class="string">'2'</span>,</span><br><span class="line">               <span class="string">'3'</span>, <span class="string">'3'</span>, <span class="string">'3'</span>, <span class="string">'3'</span>, <span class="string">'3'</span>, <span class="string">'3'</span>, <span class="string">'3'</span>, <span class="string">'3'</span>, <span class="string">'3'</span>, <span class="string">'3'</span>,</span><br><span class="line">               <span class="string">'4'</span>, <span class="string">'4'</span>, <span class="string">'4'</span>, <span class="string">'4'</span>, <span class="string">'4'</span>, <span class="string">'4'</span>, <span class="string">'4'</span>, <span class="string">'4'</span>, <span class="string">'4'</span>, <span class="string">'4'</span>,</span><br><span class="line">               <span class="string">'5'</span>, <span class="string">'5'</span>, <span class="string">'5'</span>, <span class="string">'5'</span>, <span class="string">'5'</span>, <span class="string">'5'</span>, <span class="string">'5'</span>, <span class="string">'5'</span>, <span class="string">'5'</span>, <span class="string">'5'</span>,</span><br><span class="line">               <span class="string">'6'</span>, <span class="string">'6'</span>, <span class="string">'6'</span>, <span class="string">'6'</span>, <span class="string">'6'</span>, <span class="string">'6'</span>, <span class="string">'6'</span>, <span class="string">'6'</span>, <span class="string">'6'</span>, <span class="string">'6'</span>,</span><br><span class="line">               <span class="string">'7'</span>, <span class="string">'7'</span>, <span class="string">'7'</span>, <span class="string">'7'</span>, <span class="string">'7'</span>, <span class="string">'7'</span>, <span class="string">'7'</span>, <span class="string">'7'</span>, <span class="string">'7'</span>, <span class="string">'7'</span>,</span><br><span class="line">               <span class="string">'8'</span>, <span class="string">'8'</span>, <span class="string">'8'</span>, <span class="string">'8'</span>, <span class="string">'8'</span>, <span class="string">'8'</span>, <span class="string">'8'</span>, <span class="string">'8'</span>, <span class="string">'8'</span>, <span class="string">'8'</span>,</span><br><span class="line">               <span class="string">'9'</span>, <span class="string">'9'</span>, <span class="string">'9'</span>, <span class="string">'9'</span>, <span class="string">'9'</span>, <span class="string">'9'</span>, <span class="string">'9'</span>, <span class="string">'9'</span>, <span class="string">'9'</span>, <span class="string">'9'</span>,</span><br><span class="line">               &#125; ;</span><br></pre></td></tr></table></figure></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>在51CTO上看java视频的时候，看到了<code>parseInt</code>这个函数，是<code>Integer</code>的方法，<br>看到了<code>valueOf</code>这个函数，是<code>String</code>的方法，<br><figu]]>
+    </summary>
+    
+      <category term="java" scheme="http://youzipi.me/tags/java/"/>
+    
+      <category term="java源码学习" scheme="http://youzipi.me/categories/java%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[java学习笔记（1）]]></title>
+    <link href="http://youzipi.me/2014/03/08/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01/"/>
+    <id>http://youzipi.me/2014/03/08/java学习笔记1/</id>
+    <published>2014-03-08T13:24:23.000Z</published>
+    <updated>2014-04-08T02:39:10.000Z</updated>
+    <content type="html"><![CDATA[<p>错误处理：</p>
+<h3 id="1-_Exception_in_thread_“main”_java-lang-NullPointerException">1.     Exception in thread “main” java.lang.NullPointerException</h3><p> <a href="http://stackoverflow.com/questions/5958012/exception-in-thread-main-java-lang-nullpointerexception" target="_blank" rel="external">stackoverflow上的解答</a></p>
+<p><code>It means that you are trying to access / call a method on an object which is null.</code></p>
+<p>错误原因：</p>
+<p>初始化了学生数组，但没有初始化数组中的每一个元素</p>
+<p>解决方法：</p>
+<p>重新new一个Student对象，对其录入数据，再将其付给当前的stu[i],<br>或者直接<code>stu[i] = new Student();</code><br>对应代码块如下：<br><figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Student[] stu = <span class="keyword">new</span> Student[<span class="keyword">count</span>];	<span class="comment">//建立了引用，但并没有实例化</span></span><br><span class="line"><span class="keyword">int</span> i;</span><br><span class="line"><span class="keyword">for</span>(i=<span class="number">0</span>;i &lt; <span class="keyword">count</span>;i++)&#123;</span><br><span class="line">	System.out.<span class="keyword">println</span>(<span class="string">"input id:"</span>);</span><br><span class="line">	stu[i].id = in.<span class="keyword">next</span>();		<span class="comment">//调用stu[i],报错</span></span><br><span class="line">	pass</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<pre><code>[<span class="link_label">stackoverflow上的提问</span>](<span class="link_url">http://stackoverflow.com/questions/22278892/whats-the-differences-between-initializing-an-array-of-objects-and-initializing</span>)
+ 关于对象数组初始化的问题，
+</code></pre><figure class="highlight axapta"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Student[] stu = <span class="keyword">new</span> Student[<span class="keyword">count</span>];</span><br></pre></td></tr></table></figure>
+<p>包含了两部分：</p>
+<hr>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Student[] stu;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>声明。</li>
+<li><code>stu</code>是Student[]的引用，也就是学生数组的引用，stu的值为<code>NULL</code></li>
+</ul>
+<hr>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">stu = <span class="keyword">new</span> Student[count];</span><br></pre></td></tr></table></figure>
+<ul>
+<li>初始化。</li>
+<li>分配<code>count</code>个Student类的内存空间，<code>stu</code>是其引用。</li>
+<li>每一个元素都是<code>object</code>类型，值为<code>NULL</code></li>
+<li><p>此时<code>stu[i]</code>对象并未生成</p>
+<h1 id=""> </h1><p>对于单个对象的情况：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Student stu1 = <span class="keyword">new</span> Student();</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>stu1</code>是Student的一个引用，调用<code>Student()</code>创建一个Student对象，同时返回给<code>stu1</code>一个内存引用</p>
+</li>
+<li>此时，对象已生成，可使用其属性和方法。</li>
+</ul>
+<p><code>constructor</code>:<code>构造函数</code><br><br></p>
+<h3 id="2-_java:_无法从静态上下文中引用非静态_变量_this">2. java: 无法从静态上下文中引用非静态 变量 this</h3><pre><code>用<span class="keyword">static</span>修饰的成员是属于类的，在<span class="keyword">static</span>的方法里可以用类名直接调用；
+不用<span class="keyword">static</span>修饰的成员是属于具体实例对象的，需要用对象名调用，且在<span class="keyword">static</span>的方法里不可以调用。
+</code></pre><figure class="highlight delphi"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> void main(<span class="keyword">String</span>[] args) <span class="comment">&#123;</span><br><span class="line">       ...</span><br><span class="line">for(i=0;i &lt; count;i++)&#123;</span><br><span class="line">   	stu[i] = new Student();</span></span><br></pre></td></tr></table></figure>
+<p><br></p>
+<h3 id="3-_Exception_in_thread_“main”_java-lang-ArrayIndexOutOfBoundsException:_-1">3. Exception in thread “main” java.lang.ArrayIndexOutOfBoundsException: -1</h3><p>错误原因：数组越界</p>
+<p>IntelliJ IDEA：</p>
+<ul>
+<li>类头注释编辑：<code>IDE Settings-&gt;File and Code Templates</code>修改<code>Includes-&gt;File Header</code></li>
+<li>自定义代码高亮，分类很细</li>
+<li>Structure:</li>
+<li>自带的版本控制功能还不错<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">所有类，方法，变量的结构图：</span><br><span class="line">类<span class="regexp">/方法/</span>元素是否为静态</span><br><span class="line">类<span class="regexp">/方法/</span>元素名称</span><br><span class="line">方法的返回值类型,参数/变量的数据类型，初始值</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> student_score;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="javadoc">/**</span><br><span class="line"> * project_name:student2</span><br><span class="line"> * package_name:student_score</span><br><span class="line"> * user: Administrator</span><br><span class="line"> * date: 14-3-5</span><br><span class="line"> * 成绩由外部输入</span><br><span class="line"> * 对成绩排序，输出平均成绩</span><br><span class="line"> * 四级：优，良，中，差</span><br><span class="line"> * -没有对学生属性进行封装</span><br><span class="line"> * -无错误检测：</span><br><span class="line"> * --学号重复</span><br><span class="line"> * --分数超出范围</span><br><span class="line"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">student2</span></span>&#123;</span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">float</span> total = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">    <span class="comment">//Students类定义</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">Student</span></span>&#123;</span><br><span class="line">        String name;</span><br><span class="line">        String id;</span><br><span class="line">        <span class="keyword">int</span> score;</span><br><span class="line">        String grade;</span><br><span class="line">        <span class="comment">//score_to_grade</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setGrade</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            <span class="keyword">switch</span>(<span class="keyword">this</span>.score/<span class="number">10</span>)&#123;</span><br><span class="line">                <span class="keyword">case</span> <span class="number">10</span>:</span><br><span class="line">                <span class="keyword">case</span> <span class="number">9</span>:<span class="keyword">this</span>.grade = <span class="string">"A"</span>;<span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">case</span> <span class="number">8</span>:<span class="keyword">this</span>.grade = <span class="string">"B"</span>;<span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">case</span> <span class="number">7</span>:</span><br><span class="line">                <span class="keyword">case</span> <span class="number">6</span>:<span class="keyword">this</span>.grade = <span class="string">"C"</span>;<span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">default</span>:<span class="keyword">this</span>.grade = <span class="string">"D"</span>;<span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">showInfo</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            <span class="keyword">this</span>.setGrade();</span><br><span class="line">            System.out.println(<span class="keyword">this</span>.id +<span class="string">"  "</span>+<span class="keyword">this</span>.name +<span class="string">"  "</span>+<span class="keyword">this</span>.score+<span class="string">"  "</span>+<span class="keyword">this</span>.grade);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//排序</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">sort</span><span class="params">(Student[] stu)</span></span>&#123;</span><br><span class="line">        Student temp = <span class="keyword">new</span> Student();</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i &lt; count;i++)&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j &lt; i;j++)&#123;</span><br><span class="line">                <span class="keyword">if</span>(stu[i].score &gt; stu[j].score)</span><br><span class="line">                    temp = stu[i];</span><br><span class="line">                    stu[i] = stu[j];</span><br><span class="line">                    stu[j] = temp;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//main</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"Input Students' Number:"</span>);</span><br><span class="line">        Scanner in = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        count = in.nextInt();</span><br><span class="line">        Student[] stu = <span class="keyword">new</span> Student[count];</span><br><span class="line">        <span class="keyword">int</span> i;</span><br><span class="line">        <span class="keyword">for</span>(i=<span class="number">0</span>;i &lt; count;i++)&#123;</span><br><span class="line">            stu[i] = <span class="keyword">new</span> Student();</span><br><span class="line">            System.out.println(<span class="string">"input id:"</span>);</span><br><span class="line">            stu[i].id = in.next();</span><br><span class="line">            System.out.println( <span class="string">"input name:"</span>);</span><br><span class="line">            stu[i].name = in.next();</span><br><span class="line">            System.out.println( <span class="string">"input score:"</span>);</span><br><span class="line">            stu[i].score = in.nextInt();</span><br><span class="line">            <span class="comment">//stu[i] = stu1;</span></span><br><span class="line">        &#125;</span><br><span class="line">        sort(stu);</span><br><span class="line">        System.out.println( <span class="string">"ID NAME SCORE GRADE"</span>);</span><br><span class="line">        <span class="keyword">for</span>(Student s:stu)&#123;</span><br><span class="line">            total += s.score;</span><br><span class="line">            s.showInfo();</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println( <span class="string">"AVERAGE："</span>+total/count);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+    <summary type="html">
+    <![CDATA[java学习笔记（1）	简单的学生成绩管理程序，输入输出，排序 对象数组初始化 intelliJ IDEA]]>
+    
+    </summary>
+    
+      <category term="java" scheme="http://youzipi.me/tags/java/"/>
+    
+      <category term="java学习笔记" scheme="http://youzipi.me/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[variable-test]]></title>
+    <link href="http://youzipi.me/2014/03/03/variable-test/"/>
+    <id>http://youzipi.me/2014/03/03/variable-test/</id>
+    <published>2014-03-03T09:06:28.000Z</published>
+    <updated>2014-03-18T07:52:27.000Z</updated>
+    <content type="html"><![CDATA[<p>一些blog中没有提到的：</p>
+<p>发布草稿<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo publish <span class="tag">&lt;<span class="title">filename</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>缩写：hexo p</p>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>hexo clean</span><br></pre></td></tr></table></figure>
+<p>去除缓存<code>db.json</code> and 文件夹 <code>public</code>.<br><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server <span class="comment">--debug</span></span><br></pre></td></tr></table></figure></p>
+<p>开启debug模式，所有更改会显示在命令行中并保存在根目录的debug.log文件中<br>在浏览器中可以看到即的变化</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>一些blog中没有提到的：</p>
+<p>发布草稿<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><]]>
+    </summary>
+    
+      <category term="uncategorized" scheme="http://youzipi.me/categories/uncategorized/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[qiuniuyun]]></title>
+    <link href="http://youzipi.me/2014/03/02/qiniuyun/"/>
+    <id>http://youzipi.me/2014/03/02/qiniuyun/</id>
+    <published>2014-03-02T08:23:27.000Z</published>
+    <updated>2014-03-18T07:52:27.000Z</updated>
+    <content type="html"><![CDATA[<p>ghost号称要挑战wordpress，目前是0.4.1版本，特点是极简，专注于写作，不过目前资源还比较少，去年才发布，基于node.js，支持markdown<br>，使用了一下，界面很简洁，但是没有代码高亮。但是刚花了一个周末的时间部署了hexo的博客，实在是无力折腾了，还是等ghost再成熟一些吧，再试一试。</p>
+<p><a href="https://ghost.org/" target="_blank" rel="external">ghost</a></p>
+<p><a href="http://ghostchinese.com/" target="_blank" rel="external">中文网站</a></p>
+<p><a href="http://spdf.me/about-online-ide-nitrous-io/" target="_blank" rel="external">http://spdf.me/about-online-ide-nitrous-io/</a></p>
+<p>氧化亚氮<br>nitrous：<a href="https://www.nitrous.io/join/gaj7tvQurCs?utm_source=nitrous.io&amp;utm_medium=copypaste&amp;utm_campaign=referral" target="_blank" rel="external">N2O</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>ghost号称要挑战wordpress，目前是0.4.1版本，特点是极简，专注于写作，不过目前资源还比较少，去年才发布，基于node.js，支持markdown<br>，使用了一下，界面很简洁，但是没有代码高亮。但是刚花了一个周末的时间部署了hexo的博客，实在是无力折腾了]]>
+    </summary>
+    
+      <category term="uncategorized" scheme="http://youzipi.me/categories/uncategorized/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[models-test]]></title>
+    <link href="http://youzipi.me/2014/03/02/index/"/>
+    <id>http://youzipi.me/2014/03/02/index/</id>
+    <published>2014-03-02T07:14:18.000Z</published>
+    <updated>2014-03-18T07:52:27.000Z</updated>
+    <content type="html"><![CDATA[<p>This is a page test.<br><a href="/test.html">test</a><br><img src="http://youzipi.qiniudn.com/img/programminglanguages-label.png" alt="test"></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>This is a page test.<br><a href="/test.html">test</a><br><img src="http://youzipi.qiniudn.com/img/programminglanguages-label.png" alt="te]]>
+    </summary>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[hexo博客搭建日记]]></title>
+    <link href="http://youzipi.me/2014/03/01/hexo%E6%90%AD%E5%BB%BA/"/>
+    <id>http://youzipi.me/2014/03/01/hexo搭建/</id>
+    <published>2014-03-01T14:07:41.000Z</published>
+    <updated>2014-03-18T07:52:27.000Z</updated>
+    <content type="html"><![CDATA[<figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="label">title:</span>	  <span class="preprocessor">#文章页面上的显示名称，可以任意修改，不会出现在URL中</span></span><br><span class="line"><span class="label">date:</span>	   <span class="preprocessor">#文章生成时间，一般不改，当然也可以任意修改</span></span><br><span class="line"><span class="label">categories:</span> <span class="preprocessor">#文章分类目录，可为空</span></span><br><span class="line"><span class="label">tags:</span>	   <span class="preprocessor">#文章标签，可为空，多标签请用格式[tag1,tag2,tag3]</span></span><br><span class="line"></span><br><span class="line">---</span><br><span class="line">正文部分</span><br></pre></td></tr></table></figure>
+<h3 id="tips:">tips:</h3><ol>
+<li>上面每项冒号后面都要有空格，hexo对空格，符号，大小写很严格，我就犯了categories后面的冒号写成了中文状态下的冒号</li>
+<li>如果是在命令行下通过<code>hexo new &#39;hello world&#39;</code>创建新文章，默认会加上备注信息，在目录<code>hexo\scaffolds</code>下可以找到</li>
+<li><code>post.md</code>文件，可在其中修改项，默认为：<figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">date: &#123;&#123; date &#125;&#125;</span><br><span class="line">categories: 未分类</span><br><span class="line"><span class="header">tags:</span><br><span class="line">---</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>如果不是，就要自己加上备注信息，方便管理。</p>
+<p>折腾了jekyll，多数教程都是linux下的，在windows下安装实在蛋疼。<br>遇到了下面一些问题：</p>
+<p>每次修改本地文件后，需要<code>hexo generate</code>才能保存。每次使用命令时，都要在根目录<code>H:\hexo</code>下。</p>
+<p>默认主题是<code>landscape</code><br>更换主题后，generate出错<br>解决：hexo clean<br>去除缓存文件</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">[error] &#123; <span class="string">rawMessage:</span> <span class="string">'Unable to parse.'</span>,</span><br><span class="line"><span class="label">  parsedLine:</span> <span class="number">3</span>,</span><br><span class="line"><span class="label">  snippet:</span> <span class="string">'categorie：'</span>,</span><br><span class="line"><span class="label">  parsedFile:</span> <span class="literal">null</span>,</span><br><span class="line"><span class="label">  message:</span> <span class="string">'Unable to parse.'</span>,</span><br><span class="line"><span class="label">  domain:</span> </span><br><span class="line">   &#123; <span class="string">domain:</span> <span class="literal">null</span>,</span><br><span class="line"><span class="label">     _events:</span> &#123; <span class="string">error:</span> [Function] &#125;,</span><br><span class="line"><span class="label">     _maxListeners:</span> <span class="number">10</span>,</span><br><span class="line"><span class="label">     members:</span> [],</span><br><span class="line"><span class="label">     _disposed:</span> <span class="literal">true</span> &#125;,</span><br><span class="line"><span class="label">  domainThrown:</span> <span class="literal">true</span> &#125;</span><br></pre></td></tr></table></figure>
+<p>错误信息：categorie 冒号出错</p>
+<p>所用主题代码块不加语言格式，自动高亮</p>
+<p>主题色彩路径：<br><code>D:\Documents\hexo\themes\pacman\source\css\_base\variavle.styl</code></p>
+<p>_base文件夹内还有其他配置文件</p>
+<p>该颜色的过程中发现了一个有趣的网址：<br><a href="http://www.color-hex.com/" target="_blank" rel="external">http://www.color-hex.com/</a></p>
+<p>主页上还有：<br>    <code>Latest Users Favourite Colors</code>列表里的颜色都很漂亮</p>
+<p>本文用<a href="http://blog.jsfor.com/skill/2013/08/23/rock-markdown-editor-develop-notes/" target="_blank" rel="external">Rock! Markdown Editor</a><br>编辑<br>附上github上的<a href="https://github.com/superRaytin/nodeLab/tree/master/client/Rock%20MarkDown%20Editor" target="_blank" rel="external">地址</a><br>，<br>除了启动比较慢，编辑状态下的颜色，字体大小不好调节外，其他都很好，实时预览响应很快，win平台下比较好的一款软件了。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[百度BAE要开始收费了，想换个平台，搜到了jekyll，屡次尝试后进展缓慢，错误不断，之间搜到了hexo，体验做得很好。]]>
+    
+    </summary>
+    
+      <category term="blog" scheme="http://youzipi.me/tags/blog/"/>
+    
+      <category term="hexo" scheme="http://youzipi.me/tags/hexo/"/>
+    
+      <category term="blog" scheme="http://youzipi.me/categories/blog/"/>
+    
+  </entry>
+  
+</feed>
