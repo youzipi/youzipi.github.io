@@ -72,7 +72,7 @@
       <a href="http://youzipi.me/about" title="youzipi">youzipi</a>
     </p>
   <p class="article-time">
-    更新日期:<time datetime="2015-05-03T10:58:21.000Z" itemprop="dateModified">2015-05-03</time>
+    更新日期:<time datetime="2015-05-07T12:52:30.000Z" itemprop="dateModified">2015-05-07</time>
     
  
     <time datetime="2014-03-08T13:24:23.000Z" itemprop="dateModified">发表于2014-03-08</time>
@@ -83,11 +83,11 @@
 		
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
-		<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-_Exception_in_thread_“main”_java-lang-NullPointerException"><span class="toc-number">1.</span> <span class="toc-text">1.     Exception in thread “main” java.lang.NullPointerException</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number"></span> <span class="toc-text"> </span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-_java:_无法从静态上下文中引用非静态_变量_this"><span class="toc-number">1.</span> <span class="toc-text">2. java: 无法从静态上下文中引用非静态 变量 this</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-_Exception_in_thread_“main”_java-lang-ArrayIndexOutOfBoundsException:_-1"><span class="toc-number">2.</span> <span class="toc-text">3. Exception in thread “main” java.lang.ArrayIndexOutOfBoundsException: -1</span></a></li></ol>
+		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Exception_in_thread_“main”_java-lang-NullPointerException"><span class="toc-number">1.</span> <span class="toc-text">Exception in thread “main” java.lang.NullPointerException</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#java:_无法从静态上下文中引用非静态_变量_this"><span class="toc-number">2.</span> <span class="toc-text">java: 无法从静态上下文中引用非静态 变量 this</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Exception_in_thread_“main”_java-lang-ArrayIndexOutOfBoundsException:_-1"><span class="toc-number">3.</span> <span class="toc-text">Exception in thread “main” java.lang.ArrayIndexOutOfBoundsException: -1</span></a></li></ol>
 		</div>
 		
 		<p>错误处理：</p>
-<h3 id="1-_Exception_in_thread_“main”_java-lang-NullPointerException">1.     Exception in thread “main” java.lang.NullPointerException</h3><p><a href="http://stackoverflow.com/questions/5958012/exception-in-thread-main-java-lang-nullpointerexception" target="_blank" rel="external">stackoverflow上的解答</a></p>
+<h2 id="Exception_in_thread_“main”_java-lang-NullPointerException">Exception in thread “main” java.lang.NullPointerException</h2><p><a href="http://stackoverflow.com/questions/5958012/exception-in-thread-main-java-lang-nullpointerexception" target="_blank" rel="external">stackoverflow上的解答</a></p>
 <p><code>It means that you are trying to access / call a method on an object which is null.</code></p>
 <p>错误原因：</p>
 <p>初始化了学生数组，但没有初始化数组中的每一个元素</p>
@@ -108,20 +108,19 @@
 <li>初始化。</li>
 <li>分配<code>count</code>个Student类的内存空间，<code>stu</code>是其引用。</li>
 <li>每一个元素都是<code>object</code>类型，值为<code>NULL</code></li>
-<li><p>此时<code>stu[i]</code>对象并未生成</p>
-<h1 id=""> </h1><p>对于单个对象的情况：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Student stu1 = <span class="keyword">new</span> Student();</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><code>stu1</code>是Student的一个引用，调用<code>Student()</code>创建一个Student对象，同时返回给<code>stu1</code>一个内存引用</p>
-</li>
+<li>此时<code>stu[i]</code>对象并未生成</li>
+</ul>
+<p>对于单个对象的情况：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Student stu1 = <span class="keyword">new</span> Student();</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li><code>stu1</code>是Student的一个引用，调用<code>Student()</code>创建一个Student对象，同时返回给<code>stu1</code>一个内存引用</li>
 <li>此时，对象已生成，可使用其属性和方法。</li>
 </ul>
 <p><code>constructor</code>:<code>构造函数</code><br><br></p>
-<h3 id="2-_java:_无法从静态上下文中引用非静态_变量_this">2. java: 无法从静态上下文中引用非静态 变量 this</h3><pre><code>用<span class="keyword">static</span>修饰的成员是属于类的，在<span class="keyword">static</span>的方法里可以用类名直接调用；
+<h2 id="java:_无法从静态上下文中引用非静态_变量_this">java: 无法从静态上下文中引用非静态 变量 this</h2><pre><code>用<span class="keyword">static</span>修饰的成员是属于类的，在<span class="keyword">static</span>的方法里可以用类名直接调用；
 不用<span class="keyword">static</span>修饰的成员是属于具体实例对象的，需要用对象名调用，且在<span class="keyword">static</span>的方法里不可以调用。
 </code></pre><figure class="highlight delphi"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> void main(<span class="keyword">String</span>[] args) <span class="comment">&#123;</span><br><span class="line">       ...</span><br><span class="line">for(i=0;i &lt; count;i++)&#123;</span><br><span class="line">   	stu[i] = new Student();</span></span><br></pre></td></tr></table></figure>
 <p><br></p>
-<h3 id="3-_Exception_in_thread_“main”_java-lang-ArrayIndexOutOfBoundsException:_-1">3. Exception in thread “main” java.lang.ArrayIndexOutOfBoundsException: -1</h3><p>错误原因：数组越界</p>
+<h2 id="Exception_in_thread_“main”_java-lang-ArrayIndexOutOfBoundsException:_-1">Exception in thread “main” java.lang.ArrayIndexOutOfBoundsException: -1</h2><p>错误原因：数组越界</p>
 <p>IntelliJ IDEA：</p>
 <ul>
 <li>类头注释编辑：<code>IDE Settings-&gt;File and Code Templates</code>修改<code>Includes-&gt;File Header</code></li>
@@ -189,7 +188,7 @@
 
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
-  <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-_Exception_in_thread_“main”_java-lang-NullPointerException"><span class="toc-number">1.</span> <span class="toc-text">1.     Exception in thread “main” java.lang.NullPointerException</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number"></span> <span class="toc-text"> </span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-_java:_无法从静态上下文中引用非静态_变量_this"><span class="toc-number">1.</span> <span class="toc-text">2. java: 无法从静态上下文中引用非静态 变量 this</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-_Exception_in_thread_“main”_java-lang-ArrayIndexOutOfBoundsException:_-1"><span class="toc-number">2.</span> <span class="toc-text">3. Exception in thread “main” java.lang.ArrayIndexOutOfBoundsException: -1</span></a></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Exception_in_thread_“main”_java-lang-NullPointerException"><span class="toc-number">1.</span> <span class="toc-text">Exception in thread “main” java.lang.NullPointerException</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#java:_无法从静态上下文中引用非静态_变量_this"><span class="toc-number">2.</span> <span class="toc-text">java: 无法从静态上下文中引用非静态 变量 this</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Exception_in_thread_“main”_java-lang-ArrayIndexOutOfBoundsException:_-1"><span class="toc-number">3.</span> <span class="toc-text">Exception in thread “main” java.lang.ArrayIndexOutOfBoundsException: -1</span></a></li></ol>
   </div>
 
 <div id="asidepart">
@@ -209,6 +208,8 @@
 		
 			<li><a href="/categories/uncategorized/" title="uncategorized">uncategorized<sup>3</sup></a></li>
 		
+			<li><a href="/categories/电影/" title="电影">电影<sup>1</sup></a></li>
+		
 		</ul>
 </div>
 
@@ -216,7 +217,7 @@
   
   <div class="archiveslist">
     <p class="asidetitle"><a href="/archives">归档</a></p>
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">五月 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/">四月 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">三月 2014</a><span class="archive-list-count">5</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/05/">五月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">五月 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/">四月 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">三月 2014</a><span class="archive-list-count">5</span></li></ul>
   </div>
 
 
@@ -230,6 +231,8 @@
 			<li><a href="/tags/hexo/" title="hexo">hexo<sup>1</sup></a></li>
 		
 			<li><a href="/tags/java/" title="java">java<sup>2</sup></a></li>
+		
+			<li><a href="/tags/电影/" title="电影">电影<sup>1</sup></a></li>
 		
 		</ul>
 </div>

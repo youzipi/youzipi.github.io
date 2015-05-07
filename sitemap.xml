@@ -2,8 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://youzipi.me/2015/05/07/niannian/</loc>
+    <lastmod>2015-05-07T13:01:57.000Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://youzipi.me/2014/03/08/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01/</loc>
-    <lastmod>2015-05-03T10:58:21.000Z</lastmod>
+    <lastmod>2015-05-07T12:52:30.000Z</lastmod>
   </url>
   
   <url>
@@ -14,11 +19,6 @@
   <url>
     <loc>http://youzipi.me/2014/05/30/draft/</loc>
     <lastmod>2015-02-05T04:43:03.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://youzipi.me/2014/03/03/variable-test/</loc>
-    <lastmod>2014-03-18T07:52:27.000Z</lastmod>
   </url>
   
   <url>
@@ -33,6 +33,11 @@
   
   <url>
     <loc>http://youzipi.me/2014/03/02/qiniuyun/</loc>
+    <lastmod>2014-03-18T07:52:27.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://youzipi.me/2014/03/03/variable-test/</loc>
     <lastmod>2014-03-18T07:52:27.000Z</lastmod>
   </url>
   
