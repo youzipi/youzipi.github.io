@@ -11,7 +11,7 @@
     
     <meta name="description" itemprop="description" content="百度BAE要开始收费了，想换个平台，搜到了jekyll，屡次尝试后进展缓慢，错误不断，之间搜到了hexo，体验做得很好。">
     
-    
+    <meta name="keywords" content="hexo scaffolds,hexo配置">
     
     
     <link rel="alternative" href="/atom.xml" title="Youzipi" type="application/atom+xml">
@@ -75,14 +75,14 @@ var _hmt = _hmt || [];
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2014/03/01/hexo搭建/" title="hexo博客搭建日记" itemprop="url">hexo博客搭建日记</a>
+      <a href="/2014/03/01/hexo-build/" title="hexo博客搭建日记" itemprop="url">hexo博客搭建日记</a>
   </h1>
   <p class="article-author">By
     
       <a href="http://youzipi.me/about" title="youzipi">youzipi</a>
     </p>
   <p class="article-time">
-    更新日期:<time datetime="2014-03-18T07:52:27.000Z" itemprop="dateModified">2014-03-18</time>
+    更新日期:<time datetime="2015-06-03T13:16:39.000Z" itemprop="dateModified">2015-06-03</time>
     
  
     <time datetime="2014-03-01T14:07:41.000Z" itemprop="dateModified">发表于2014-03-01</time>
@@ -96,9 +96,9 @@ var _hmt = _hmt || [];
 		<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#tips:"><span class="toc-number">1.</span> <span class="toc-text">tips:</span></a></li></ol>
 		</div>
 		
-		<figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="label">title:</span>	  <span class="preprocessor">#文章页面上的显示名称，可以任意修改，不会出现在URL中</span></span><br><span class="line"><span class="label">date:</span>	   <span class="preprocessor">#文章生成时间，一般不改，当然也可以任意修改</span></span><br><span class="line"><span class="label">categories:</span> <span class="preprocessor">#文章分类目录，可为空</span></span><br><span class="line"><span class="label">tags:</span>	   <span class="preprocessor">#文章标签，可为空，多标签请用格式[tag1,tag2,tag3]</span></span><br><span class="line"></span><br><span class="line">---</span><br><span class="line">正文部分</span><br></pre></td></tr></table></figure>
+		<figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">title:	  #文章页面上的显示名称，可以任意修改，不会出现在URL中</span><br><span class="line">date:	   #文章生成时间，一般不改，当然也可以任意修改</span><br><span class="line">categories: #文章分类目录，可为空</span><br><span class="line">tags:	   #文章标签，可为空，多标签请用格式[tag1,tag2,tag3]</span><br><span class="line">description: </span><br><span class="line"><span class="header">keywords: SEO用</span><br><span class="line">---</span></span><br><span class="line">正文部分</span><br></pre></td></tr></table></figure>
 <h3 id="tips:">tips:</h3><ol>
-<li>上面每项冒号后面都要有空格，hexo对空格，符号，大小写很严格，我就犯了categories后面的冒号写成了中文状态下的冒号</li>
+<li>上面每项冒号后面都要有<strong>空格</strong>,所有标点必须为英文标点，hexo对空格，符号，大小写很严格，我就犯了categories后面的冒号写成了中文状态下的冒号</li>
 <li>如果是在命令行下通过<code>hexo new &#39;hello world&#39;</code>创建新文章，默认会加上备注信息，在目录<code>hexo\scaffolds</code>下可以找到</li>
 <li><code>post.md</code>文件，可在其中修改项，默认为：<figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">date: &#123;&#123; date &#125;&#125;</span><br><span class="line">categories: 未分类</span><br><span class="line"><span class="header">tags:</span><br><span class="line">---</span></span><br></pre></td></tr></table></figure>
 </li>
@@ -106,15 +106,15 @@ var _hmt = _hmt || [];
 <p>如果不是，就要自己加上备注信息，方便管理。</p>
 <p>折腾了jekyll，多数教程都是linux下的，在windows下安装实在蛋疼。<br>遇到了下面一些问题：</p>
 <p>每次修改本地文件后，需要<code>hexo generate</code>才能保存。每次使用命令时，都要在根目录<code>H:\hexo</code>下。</p>
-<p>默认主题是<code>landscape</code><br>更换主题后，generate出错<br>解决：hexo clean<br>去除缓存文件</p>
+<p>默认主题是<code>landscape</code><br>更换主题后，generate出错<br>解决：hexo clean<br>清除缓存文件</p>
 <figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">[error] &#123; <span class="string">rawMessage:</span> <span class="string">'Unable to parse.'</span>,</span><br><span class="line"><span class="label">  parsedLine:</span> <span class="number">3</span>,</span><br><span class="line"><span class="label">  snippet:</span> <span class="string">'categorie：'</span>,</span><br><span class="line"><span class="label">  parsedFile:</span> <span class="literal">null</span>,</span><br><span class="line"><span class="label">  message:</span> <span class="string">'Unable to parse.'</span>,</span><br><span class="line"><span class="label">  domain:</span> </span><br><span class="line">   &#123; <span class="string">domain:</span> <span class="literal">null</span>,</span><br><span class="line"><span class="label">     _events:</span> &#123; <span class="string">error:</span> [Function] &#125;,</span><br><span class="line"><span class="label">     _maxListeners:</span> <span class="number">10</span>,</span><br><span class="line"><span class="label">     members:</span> [],</span><br><span class="line"><span class="label">     _disposed:</span> <span class="literal">true</span> &#125;,</span><br><span class="line"><span class="label">  domainThrown:</span> <span class="literal">true</span> &#125;</span><br></pre></td></tr></table></figure>
 <p>错误信息：categorie 冒号出错</p>
 <p>所用主题代码块不加语言格式，自动高亮</p>
 <p>主题色彩路径：<br><code>D:\Documents\hexo\themes\pacman\source\css\_base\variavle.styl</code></p>
 <p>_base文件夹内还有其他配置文件</p>
 <p>该颜色的过程中发现了一个有趣的网址：<br><a href="http://www.color-hex.com/" target="_blank" rel="external">http://www.color-hex.com/</a></p>
-<p>主页上还有：<br>    <code>Latest Users Favourite Colors</code>列表里的颜色都很漂亮</p>
-<p>本文用<a href="http://blog.jsfor.com/skill/2013/08/23/rock-markdown-editor-develop-notes/" target="_blank" rel="external">Rock! Markdown Editor</a><br>编辑<br>附上github上的<a href="https://github.com/superRaytin/nodeLab/tree/master/client/Rock%20MarkDown%20Editor" target="_blank" rel="external">地址</a><br>，<br>除了启动比较慢，编辑状态下的颜色，字体大小不好调节外，其他都很好，实时预览响应很快，win平台下比较好的一款软件了。</p>
+<p>主页上还有：<br>    <code>Latest Users Favourite Colors</code><br>列表里的颜色都很漂亮</p>
+<p><del>本文用<a href="http://blog.jsfor.com/skill/2013/08/23/rock-markdown-editor-develop-notes/" target="_blank" rel="external">Rock! Markdown Editor</a>编辑<br>附上github上的<a href="https://github.com/superRaytin/nodeLab/tree/master/client/Rock%20MarkDown%20Editor" target="_blank" rel="external">地址</a><br>除了启动比较慢，编辑状态下的颜色，字体大小不好调节外，其他都很好，实时预览响应很快，win平台下比较好的一款软件了。</del><br>2015-06-03更新：<br>目前使用MarkdownPad</p>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -135,7 +135,7 @@ var _hmt = _hmt || [];
 
 <div class="article-share" id="share">
 
-  <div data-url="http://youzipi.me/2014/03/01/hexo搭建/" data-title="hexo博客搭建日记 | Youzipi" data-tsina="3210757652" class="share clearfix">
+  <div data-url="http://youzipi.me/2014/03/01/hexo-build/" data-title="hexo博客搭建日记 | Youzipi" data-tsina="3210757652" class="share clearfix">
   </div>
 
 </div>
@@ -179,11 +179,15 @@ var _hmt = _hmt || [];
 		
 			<li><a href="/categories/blog/" title="blog">blog<sup>1</sup></a></li>
 		
-			<li><a href="/categories/java学习笔记/" title="java学习笔记">java学习笔记<sup>1</sup></a></li>
+			<li><a href="/categories/java-study-note/" title="java-study-note">java-study-note<sup>1</sup></a></li>
+		
+			<li><a href="/categories/java学习笔记/" title="java学习笔记">java学习笔记<sup>0</sup></a></li>
 		
 			<li><a href="/categories/java源码学习/" title="java源码学习">java源码学习<sup>1</sup></a></li>
 		
-			<li><a href="/categories/uncategorized/" title="uncategorized">uncategorized<sup>3</sup></a></li>
+			<li><a href="/categories/uncategorized/" title="uncategorized">uncategorized<sup>2</sup></a></li>
+		
+			<li><a href="/categories/总结/" title="总结">总结<sup>1</sup></a></li>
 		
 			<li><a href="/categories/电影/" title="电影">电影<sup>1</sup></a></li>
 		
