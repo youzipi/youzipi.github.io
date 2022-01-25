@@ -1,3 +1,94 @@
 baseURL = 'http://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'youzipi'
+
+languageCode = "zh-cn"
+DefaultContentLanguage = "zh-cn"
+
+theme = 'mainroad'
+
+paginate = "10" # Number of posts per page
+disqusShortname = "" # Enable comments by entering your Disqus shortname
+googleAnalytics = "" # Enable Google Analytics by entering your tracking id
+
+# [frontmatter]
+#   date = [":filename", ":default", ":fileModTime"]
+
+[permalinks]
+  blog = "/blog/:year/:month/:day/:title/"
+  docs = "/:title/"
+
+
+[Author]
+  name = "youzipi"
+  bio = "developer"
+  avatar = "img/avatar.png"
+
+
+# 在顶部添加菜单栏, weight 决定显示顺序
+[menu]
+    [[menu.main]]
+        identifier = "blog"
+        name = "博客文章"
+        url = "/blog/"
+        weight = 10
+    [[menu.main]]
+        identifier = "categories"
+        name = "所有分类"
+        url = "/categories/"
+        weight = 20
+    [[menu.main]]
+        identifier = "tags"
+        name = "所有标签"
+        url = "/tags/"
+        weight = 30
+    [[menu.main]]
+        identifier = "about"
+        name = "关于我"
+        url = "/about/"
+        weight = 40
+
+[Params]
+  description = "John Doe's Personal blog about everything" # Description of your site
+  opengraph = true
+  twitter_cards = false
+  readmore = true # Show "Read more" button in list if true
+  authorbox = false
+  pager = true
+  post_meta = ["author", "date", "categories"] # Order of post meta information
+  mainSections = ["blog"]
+  toc = true
+   # 版权声明
+  copyright = "版权所有"
+  
+[Params.style.vars]
+  highlightColor = "#e22d30"
+
+
+[Params.sidebar]
+  home = "right"   # Configure layout for home page
+  list = "right"   # Configure layout for list pages
+  single = "right" # Configure layout for single pages
+  # Enable widgets in given order
+  widgets = ["search", "recent", "categories", "taglist","social", "languages"]
+
+[Params.widgets]
+  recent_num = 5 # Set the number of articles in the "Recent articles" widget
+  categories_counter = true # Enable counter for each category in "Categories" widget
+  tags_counter = true # Enable counter for each tag in "Tags" widget
+
+[Params.widgets.social]
+  # Enable parts of social widget
+  # facebook = "username"
+  twitter = "username"
+  instagram = "username"
+  # linkedin = "username"
+  telegram = "username"
+  github = "username"
+  # gitlab = "username"
+  # bitbucket = "username"
+  email = "example@example.com"
+
+[[Params.widgets.social.custom]]
+  title = "douban"
+  url = "https://example.com"
+  # icon = "youtube.svg"
