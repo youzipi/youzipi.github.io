@@ -1,9 +1,12 @@
 --- 
 title: about
 date: 2014-03-01 14:58:06
-comments: false
 
 authorbox: true
+
+sidebar:  false
+
+
 ---
 
 # 关于我

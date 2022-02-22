@@ -8,8 +8,10 @@ hasCJKLanguage = true
 theme = 'mainroad'
 
 paginate = "10" # Number of posts per page
-disqusShortname = "" # Enable comments by entering your Disqus shortname
+disqusShortname = "youzipi" # Enable comments by entering your Disqus shortname
 googleAnalytics = "" # Enable Google Analytics by entering your tracking id
+
+enableGitInfo = true
 
 [markup]
   # defaultMarkdownHandler = 'blackFriday'
@@ -69,6 +71,7 @@ googleAnalytics = "" # Enable Google Analytics by entering your tracking id
 [Params]
   description = "John Doe's Personal blog about everything" # Description of your site
   opengraph = true
+  schema = true
   twitter_cards = false
   readmore = true # Show "Read more" button in list if true
   authorbox = false
@@ -77,12 +80,34 @@ googleAnalytics = "" # Enable Google Analytics by entering your tracking id
   mainSections = ["blog"]
   toc = true
    # 版权声明
-  copyright = "版权所有"
+  copyright = "youzipi"
+
+  
+  gitRepo = "git@github.com:youzipi/youzipi.github.io.git"
+
+
+  dateFormatToUse = "2006-01-02"
+
+  # show word count and read time ?                       # 是否显示字数统计与阅读时间
+  moreMeta = true
+
+  fancybox = true           # see https://github.com/fancyapps/fancybox                 # 是否启用fancybox（图片可点击）
+
   
   # style
   customCSS = [
 	"https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css",
 ]
+
+[Params.logo]
+  image = "img/avatar.jpg"
+  title = "youzipi"
+  subtitle = "developer"
+
+[params.reward]                                         # 文章打赏
+  enable = false
+  wechat = "/path/to/your/wechat-qr-code.png"           # 微信二维码
+  alipay = "/path/to/your/alipay-qr-code.png"           # 支付宝二维码
 
 
 [Params.sidebar]
